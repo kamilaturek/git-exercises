@@ -32,4 +32,12 @@ public class HelloController {
 
         return model;
     }
+
+    @RequestMapping("/proActaName")
+    public Map<String,Object> proActaName() {
+        Map<String,Object> model = new HashMap<String,Object>();
+        model.put("name", "Pro Acta");
+
+        return model;
+    }
 }
