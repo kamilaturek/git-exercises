@@ -38,5 +38,14 @@ public class HelloController {
         map.put("dzien", "Dzisiaj jest czwartek :)");
         return map;
     }
+
+    @RequestMapping("/nazwaFirmy")
+    public Map<String,String> pobierzNazweFirmy() {
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("nazwa", "ProActa");
+        return map;
+    }
+
+
     
 }
