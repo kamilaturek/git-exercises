@@ -9,8 +9,7 @@ angular.module('hello', [])
             $http.get('/today').success(function(data) {
                 $scope.day = data.dzien;
             })
-        }
-        });
+        };
 
         $scope.getToday = function(){
             $http.get('/today/').success(function(data) {
