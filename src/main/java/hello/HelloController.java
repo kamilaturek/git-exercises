@@ -26,7 +26,10 @@ public class HelloController {
     }
 
     @RequestMapping("/today")
-    public String today() {
-        return LocalDate.now().getDayOfWeek().name();
+    public Map<String,Object> today() {
+        Map<String,Object> model = new HashMap<String,Object>();
+        model.put("today", LocalDate.now().getDayOfWeek().name());
+
+        return model;
     }
 }
