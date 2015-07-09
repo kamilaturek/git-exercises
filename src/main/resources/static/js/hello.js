@@ -5,6 +5,12 @@ angular.module('hello', [])
             $scope.greeting = data;
         });
 
+        $scope.giveMeDay = function(){
+            $http.get('/todayBartek').success(function(data) {
+                $scope.day = data.dzien;
+            })
+        };
+
         $scope.getToday = function(){
             $http.get('/today/').success(function(data) {
                 $scope.today = data.dzien;
