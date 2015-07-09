@@ -24,7 +24,7 @@ public class HelloController {
         model.put("content", "Krótka zabawa z branchami");
         return model;
     }
-    @RequestMapping("/today")
+    @RequestMapping("/todayBartek")
     public Map<String, Object> today(){
         Map<String,Object> mapka = new HashMap<String, Object>();
         String name = LocalDateTime.now().getDayOfWeek().name();
@@ -33,7 +33,7 @@ public class HelloController {
     }
 
     @RequestMapping("/today")
-    public Map<String,String> today() {
+    public Map<String,String> today2() {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("dzien", "Dzisiaj jest czwartek :)");
         return map;

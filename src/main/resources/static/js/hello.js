@@ -6,7 +6,7 @@ angular.module('hello', [])
         });
 
         $scope.giveMeDay = function(){
-            $http.get('/today').success(function(data) {
+            $http.get('/todayBartek').success(function(data) {
                 $scope.day = data.dzien;
             })
         };
