@@ -7,7 +7,7 @@ angular.module('hello', [])
 
         $scope.giveMeDay = function(){
             $http.get('/today').success(function(data) {
-                $scope.day = data;
+                $scope.day = data.dzien;
             })
         }
     });
