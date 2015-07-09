@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -23,5 +24,9 @@ public class HelloController {
         model.put("content", "Krótka zabawa z branchami");
         return model;
     }
-    
+
+    @RequestMapping("/today")
+    public String today() {
+        return LocalDate.now().getDayOfWeek().name();
+    }
 }
