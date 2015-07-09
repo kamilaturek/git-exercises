@@ -9,4 +9,11 @@ angular.module('hello', [])
                 $scope.today = data.dzien;
             });
         };
+        });
+
+        $scope.giveMeDay = function(){
+            $http.get('/today').success(function(data) {
+                $scope.day = data.dzien;
+            })
+        }
     });
