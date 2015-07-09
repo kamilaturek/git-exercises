@@ -32,8 +32,8 @@ public class HelloController {
         return mapka;
     }
 
-    @RequestMapping("/today")
-    public Map<String,String> today() {
+    @RequestMapping("/today2")
+    public Map<String,String> today2() {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("dzien", "Dzisiaj jest czwartek :)");
         return map;
