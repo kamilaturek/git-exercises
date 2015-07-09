@@ -1,12 +1,13 @@
 package hello;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
@@ -22,6 +23,13 @@ public class HelloController {
         model.put("id", UUID.randomUUID().toString());
         model.put("content", "Krótka zabawa z branchami");
         return model;
+    }
+    @RequestMapping("/today")
+    public Map<String, Object> today(){
+        Map<String,Object> mapka = new HashMap<String, Object>();
+        String name = LocalDateTime.now().getDayOfWeek().name();
+        mapka.put("dzien", name);
+        return mapka;
     }
 
     @RequestMapping("/today")
