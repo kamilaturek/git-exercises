@@ -23,5 +23,10 @@ public class HelloController {
         model.put("content", "Krótka zabawa z branchami");
         return model;
     }
+
+    @RequestMapping("/today")
+    public String today() {
+       return "Dzisiaj jest czwartek :)";
+    }
     
 }
